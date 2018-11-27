@@ -8,24 +8,20 @@ Using TypeScript we can get way more out of GraphQL than with JavaScript. But we
 
 Instead of returning `data`, `loading` and `error` it returns a result which is a Discriminated Union with the property `type` being the discriminant. Why? Because these states can't happen at the same time. loading and error for example can never be true at the same time.
 
-```tsx
-import React from "react";
-import gql from "graphql-tag";
-import { Query } from "ts-react-apollo";
+Using a switch statment with an assetNever default case we can do exhaustive checking on all the possible states.
 
-const getProfile = gql`
-  {
-    github {
-      user(username: "eversport") {
-        login
-        avatar_url
-      }
-    }
-  }
-`;
+```tsx
+interface ProfileData {
+  github: {
+    user: {
+      avatar_url: string;
+      login: string;
+    };
+  };
+}
 
 const Profile = () => (
-  <Query query={getProfile}>
+  <Query<ProfileData> query={getProfile}>
     {({ result }) => {
       switch (result.type) {
         case "loading":
@@ -41,19 +37,17 @@ const Profile = () => (
               />
             </div>
           );
+        default:
+          return assertNever(result);
       }
     }}
   </Query>
 );
-
-export default Profile;
 ```
 
-You can find the working example here https://codesandbox.io/s/0qx7ovkzvn
+You can find the working example in the repository.
 
 ## Todo
-- [ ] Add Readme
 - [ ] Add API documentation
 - [ ] Add tests
-- [ ] Add examples
 - [ ] Add a license
