@@ -22,7 +22,8 @@ const config = [
         extensions: ['.ts', '.tsx'],
       }),
       typescript({
-        tsconfig: '../tsconfig.json',
+        typescript: require('typescript'),
+        // tsconfig: path.resolve('..', '/tsconfig.json'),
       }),
     ],
   },
@@ -30,13 +31,17 @@ const config = [
   {
     input: './src/index.ts',
     output: {
-      globals: { react: 'React' },
+      globals: {
+        react: 'React',
+        'apollo-client': 'ApolloClient',
+        'react-apollo': 'ReactApollo',
+      },
       name: 'TSApollo',
       file: pkg.browser,
       format: 'umd',
     },
 
-    external: ['react'],
+    external: ['react', 'apollo-client', 'react-apollo'],
 
     plugins: [
       resolve({
@@ -44,8 +49,9 @@ const config = [
         extensions: ['.ts', '.tsx'],
       }),
       typescript({
+        typescript: require('typescript'),
         tsconfigOverride: { compilerOptions: { target: 'es5' } },
-        tsconfig: path.resolve('..', '/tsconfig.json'),
+        // tsconfig: path.resolve('..', '/tsconfig.json'),
       }),
     ],
   },
