@@ -17,3 +17,4 @@ import { Query } from "ts-react-apollo";
 - [ ] Add API documentation
 - [ ] Add tests
 - [ ] Add examples
+- [ ] Add a license
