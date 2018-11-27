@@ -1,8 +1,8 @@
 {
-  "name": "ts-apollo",
+  "name": "ts-react-apollo",
   "version": "0.0.1",
   "description": "Thin-Layer around react apollo client to use typescript to the fullest",
-  "repository": "git@github.com:eversport/ts-apollo.git",
+  "repository": "git@github.com:eversport/ts-react-apollo.git",
   "author": "treylon <lukas.kuehnert@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -19,9 +19,9 @@
       "git add"
     ]
   },
-  "main": "dist/ts-apollo.cjs.js",
-  "module": "dist/ts-apollo.esm.js",
-  "browser": "dist/ts-apollo.umd.js",
+  "main": "dist/ts-react-apollo.cjs.js",
+  "module": "dist/ts-react-apollo.esm.js",
+  "browser": "dist/ts-react-apollo.umd.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
