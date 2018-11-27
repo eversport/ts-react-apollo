@@ -10,7 +10,7 @@ Instead of returning `data`, `loading` and `error` it returns a result which is 
 
 Using a switch statment with an assetNever default case we can do exhaustive checking on all the possible states.
 
-```tsx
+```jsx
 interface ProfileData {
   github: {
     user: {
