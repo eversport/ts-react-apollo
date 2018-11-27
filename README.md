@@ -6,7 +6,7 @@ Using TypeScript we can get way more out of GraphQL than with JavaScript. But we
 
 ### Query
 
-Instead of returning `data`, `loading` and `error` it turns a Discriminated Unions with the property `xyz` being the discriminant.
+Instead of returning `data`, `loading` and `error` it returns a result which is a Discriminated Union with the property `type` being the discriminant. Why? Because these states can't happen at the same time. loading and error for example can never be true at the same time.
 
 ```
 import React from "react";
