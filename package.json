@@ -1,0 +1,59 @@
+{
+  "name": "ts-apollo",
+  "version": "0.0.1",
+  "description": "Thin-Layer around react apollo client to use typescript to the fullest",
+  "repository": "git@github.com:eversport/ts-apollo.git",
+  "author": "treylon <lukas.kuehnert@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --project config && rollup -c config/rollup.config.js"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "tslint --fix",
+      "prettier --parser typescript --write",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "prettier --parser flow --write",
+      "git add"
+    ]
+  },
+  "main": "dist/ts-apollo.cjs.js",
+  "module": "dist/ts-apollo.esm.js",
+  "browser": "dist/ts-apollo.umd.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "apollo-client": "^2.4.7",
+    "graphql": "^14.0.2",
+    "react": "^16.6.3",
+    "react-apollo": "^2.3.1",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.0.3",
+    "@types/react": "^16.7.7",
+    "@types/react-dom": "^16.0.10",
+    "apollo-client": "^2.4.7",
+    "graphql": "^14.0.2",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.5",
+    "react-apollo": "^2.3.1",
+    "rollup": "^0.63.2",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-typescript2": "^0.15.1",
+    "typescript": "^2.9.2"
+  },
+  "prettier": {
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "arrowParens": "avoid"
+  },
+  "sideEffects": false
+}
