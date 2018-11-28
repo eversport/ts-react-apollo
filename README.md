@@ -2,6 +2,20 @@
 
 Using TypeScript we can get way more out of GraphQL than with JavaScript. But we can go even further than just typing return values. We should structure our APIs to support TypeScript in what it does best: make our life as a developer easier.
 
+## Installation
+
+Add via [Yarn](https://www.npmjs.com/package/ts-react-apollo):
+```
+yarn add ts-react-apollo
+```
+
+Add via [NPM](https://www.npmjs.com/package/ts-react-apollo):
+```
+npm i ts-react-apollo
+```
+
+If you would like us to support other ways of using ts-react-apollo please open an issue.
+
 ## API
 
 ### Query
