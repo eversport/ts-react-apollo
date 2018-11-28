@@ -62,4 +62,3 @@ You can find the working example in the repository.
 ## Todo
 - [ ] Add API documentation
 - [ ] Add tests
-- [x] Add a license
