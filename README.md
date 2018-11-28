@@ -50,4 +50,4 @@ You can find the working example in the repository.
 ## Todo
 - [ ] Add API documentation
 - [ ] Add tests
-- [ ] Add a license
+- [x] Add a license
