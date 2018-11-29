@@ -24,16 +24,29 @@ interface Error {
 
 export type QueryResult<T> = Loading | Data<T> | Error
 
-export interface QueryProps<TData, TVariables> extends Omit<ApolloQueryProps<TData, TVariables>, 'children'> {
+export interface QueryProps<TData, TVariables>
+  extends Omit<
+    ApolloQueryProps<TData, TVariables>,
+    'children' | 'notifyOnNetworkStatusChange'
+  > {
   children: (value: { result: QueryResult<TData> }) => React.ReactNode
 }
 
-class Query<TData = any, TVariables = OperationVariables> extends React.PureComponent<QueryProps<TData, TVariables>> {
+class Query<
+  TData = any,
+  TVariables = OperationVariables
+> extends React.PureComponent<QueryProps<TData, TVariables>> {
   public render() {
-    return <ApolloQuery {...this.props}>{data => this.props.children({ result: this.mapData(data) })}</ApolloQuery>
+    return (
+      <ApolloQuery {...this.props}>
+        {data => this.props.children({ result: this.mapData(data) })}
+      </ApolloQuery>
+    )
   }
 
-  private mapData = (result: ApolloQueryResult<TData, TVariables>): QueryResult<TData> => {
+  private mapData = (
+    result: ApolloQueryResult<TData, TVariables>,
+  ): QueryResult<TData> => {
     const { loading, error, data } = result
 
     if (loading) {
@@ -53,7 +66,9 @@ class Query<TData = any, TVariables = OperationVariables> extends React.PureComp
     }
 
     // This point should actually never be reached due to the restrictions of Apollo GraphQL responses
-    console.error('An unexpected Query sidecase happened where no valid union type could be found, please file an issue for this.')
+    console.error(
+      'An unexpected Query sidecase happened where no valid union type could be found, please file an issue for this.',
+    )
     return { type: 'error', error: new ApolloError({}) }
   }
 }

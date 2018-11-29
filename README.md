@@ -57,6 +57,8 @@ const Profile = () => (
 );
 ```
 
+**Info: To keep the return value as simple as possible the current query component does not support the `notifyOnNetworkStatusChange` property. If you feel that we should add this please create an issue and describe the possible use case that you experience.**
+
 You can find the working example in the repository.
 
 ## Todo
