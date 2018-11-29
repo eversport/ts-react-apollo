@@ -1,6 +1,6 @@
 {
   "name": "ts-react-apollo",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Thin-Layer around react apollo client to use typescript to the fullest",
   "repository": "git@github.com:eversport/ts-react-apollo.git",
   "author": "treylon <lukas.kuehnert@gmail.com>",
