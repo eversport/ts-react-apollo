@@ -6823,7 +6823,7 @@ react-is@^16.3.2:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.3.tgz#d2d7462fcfcbe6ec0da56ad69047e47e56e7eac0"
   integrity sha512-u7FDWtthB4rWibG/+mFbVd5FvdI20yde86qKGx4lVUTWmPlSWQ4QxbBIrrs+HnXGbxOUlUzTAP/VDmvCwaP2yA==
 
-react-scripts-ts@3.1.0:
+react-scripts-ts@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-scripts-ts/-/react-scripts-ts-3.1.0.tgz#3f285c54b242ff6ecbfb91785060db10660ee7b0"
   integrity sha512-D5MobGSGswNH3e8RVa8M50jIsazNIqizO5qwWYqfo/tMYSvG0ENotzD3SYMUWYb1E5fIcM+D9a0XEJgo3VgtCQ==
@@ -8114,10 +8114,10 @@ ts-loader@^2.3.7:
     loader-utils "^1.0.2"
     semver "^5.0.1"
 
-ts-react-apollo@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ts-react-apollo/-/ts-react-apollo-1.0.0.tgz#93127475d641cad0213eb065ba94da7d5f609716"
-  integrity sha512-BrlPlQ1R9ZZ1xCcgqzLydjPq4yRN6CgZyG80ZI7bMoMkefBdBlWZe73cseNPmW/6nVwOgRbI8+ob81zfltJd+Q==
+ts-react-apollo@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ts-react-apollo/-/ts-react-apollo-1.0.1.tgz#e36444b3f1ce4434a58b1dccb36041d26045a8df"
+  integrity sha512-L3WPJv8kgDO+s7xEBIq0MO2ij1d13EzzuF1xnR+17LzBRoj8CvKhkjbC8C/nqJg9evq553dExtOsCQWmWLD0KQ==
 
 tsconfig-paths-webpack-plugin@^2.0.0:
   version "2.0.0"
