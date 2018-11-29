@@ -1,12 +1,13 @@
 {
   "name": "ts-react-apollo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Thin-Layer around react apollo client to use typescript to the fullest",
   "repository": "git@github.com:eversport/ts-react-apollo.git",
   "author": "treylon <lukas.kuehnert@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc --project config && rollup -c config/rollup.config.js"
+    "build": "tsc --project config && rollup -c config/rollup.config.js",
+    "publish-version": "yarn build && yarn publish"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
