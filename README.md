@@ -1,17 +1,15 @@
 ## TypeScript React Apollo
 
-Using TypeScript we can get way more out of GraphQL than with JavaScript. But we can go even further than just typing return values. We should structure our APIs to support TypeScript in what it does best: make our life as a developer easier.
+This package uses react-apollo under the hood, but does change the result type to tailer it to make use of helpful TypeScript features for a better developer experience. For example using exhaustive matching against Discriminated Unions for the Query render prop.
 
 ## Installation
 
-Add via [Yarn](https://www.npmjs.com/package/ts-react-apollo):
-```
-yarn add ts-react-apollo
-```
+https://www.npmjs.com/package/ts-react-apollo
 
-Add via [NPM](https://www.npmjs.com/package/ts-react-apollo):
 ```
 npm i ts-react-apollo
+# in case you prefer yarn use
+yarn add ts-react-apollo
 ```
 
 If you would like us to support other ways of using ts-react-apollo please open an issue.
@@ -64,4 +62,3 @@ You can find the working example in the repository.
 ## Todo
 - [ ] Add API documentation
 - [ ] Add tests
-- [x] Add a license
