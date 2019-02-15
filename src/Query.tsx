@@ -29,7 +29,11 @@ export interface QueryProps<TData, TVariables>
     ApolloQueryProps<TData, TVariables>,
     'children' | 'notifyOnNetworkStatusChange'
   > {
-  children: (value: { result: QueryResult<TData> }) => React.ReactNode
+  children: (
+    value: {
+      result: QueryResult<TData>
+    },
+  ) => React.ReactNode
 }
 
 class Query<

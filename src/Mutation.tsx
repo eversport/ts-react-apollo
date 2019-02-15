@@ -28,8 +28,10 @@ export type MutationResult<T> = Loading | Data<T> | Error
 export interface MutationProps<TData, TVariables>
   extends Omit<ApolloMutationProps<TData, TVariables>, 'children'> {
   children: (
-    mutateFn: MutationFn<TData, TVariables>,
-    result: MutationResult<TData>,
+    value: {
+      mutateFn: MutationFn<TData, TVariables>
+      result: MutationResult<TData>
+    },
   ) => React.ReactNode
 }
 
@@ -40,7 +42,9 @@ class Mutation<
   public render() {
     return (
       <ApolloMutation {...this.props}>
-        {(mutateFn, data) => this.props.children(mutateFn, this.mapData(data))}
+        {(mutateFn, data) =>
+          this.props.children({ mutateFn, result: this.mapData(data) })
+        }
       </ApolloMutation>
     )
   }
