@@ -1,3 +1,7 @@
+**DEPRECATED**
+
+_Since there now is amazing hook support which makes using react-apollo way easier this project is discontinued_
+
 ## TypeScript React Apollo
 
 This package uses react-apollo under the hood, but does change the result type to tailer it to make use of helpful TypeScript features for a better developer experience. For example using exhaustive matching against Discriminated Unions for the Query render prop.
